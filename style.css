@@ -20,6 +20,11 @@ body {
   width: 100px;
 }
 
+.active {
+  background-color: #0b372dbb; /* oder jede gewünschte Farbe */
+}
+
+
 header {
   position: absolute;
   z-index: 9999;

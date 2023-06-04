@@ -3,6 +3,10 @@ body {
     background-color: #0b372dbb;
     color: #fff;
   }
+
+  .active {
+    background-color: #0b372dbb; /* oder jede gewünschte Farbe */
+  }
   
   .container {
     max-width: 800px;

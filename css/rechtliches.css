@@ -5,7 +5,7 @@ body {
   }
 
   .active {
-    background-color: #0b372dbb; /* oder jede gewünschte Farbe */
+    background-color: #0b372dbb;
   }
   
   .container {
@@ -28,5 +28,111 @@ body {
   
   p {
     margin-bottom: 20px;
+  }
+
+  header nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  header nav ul li {
+    padding: 0 1.5rem;
+  }
+  
+  header nav .dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+  }
+  
+  header nav .dropdown-menu li {
+    width: 100%;
+  }
+  
+  @media (max-width: 760px) {
+    header nav ul:not(.dropdown-menu) {
+      display: none; 
+    }
+  
+    header nav .dropdown-menu {
+      display: none;
+    }
+  
+    header nav .dropdown-menu.show {
+      display: block;
+      text-align: center;
+      background: transparent;
+      height: 100svh;
+      border: none;
+    }
+  
+    header nav .dropdown-menu.show li {
+      padding: 2rem;
+    }
+  
+    header nav .dropdown-menu.show li a {
+      background-color: #ffffff84;
+      border-radius: 30px;
+      padding: 1rem;
+    }
+    
+    header nav .hamburger {
+      display: flex;
+      align-items: center;
+      margin-left: 1.5rem;
+      cursor: pointer;
+    }
+  
+    header nav .hamburger .bar {
+      position: relative;
+      width: 52%;
+      height: 1.3px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+  
+    header nav .hamburger .bar::before,
+    header nav .hamburger .bar::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 100%;
+      background-color: inherit;
+      border-radius: 2px;
+    }
+  
+    header nav .hamburger .bar::before {
+      top: -4.5px;
+    }
+  
+    header nav .hamburger .bar::after {
+      top: 4.5px;
+    }
   }
   
